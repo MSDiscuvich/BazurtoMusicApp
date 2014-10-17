@@ -6,69 +6,87 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class Disco  : Productos
+    public class Disco  : Productos
     {
-        private string nombre { get; set; }
-        private Cancion cancion{ get; set; }
+        public string Nombre { get; set; }
+        private Cancion cancion { get; set; }
         public int Cantidad { get; set; }
-        private int _IdCancion;
         private Cancion _cancion = null;
+        private List<Cancion> canciones;
+        public int CC { get; set; }
 
         
+        public Disco():base ()
+    {
+    canciones=null;
 
-        public Disco (string titulo, string artista, string descripcion, int duracion, double precio, double peso) 
-           : base (titulo, artista, descripcion,duracion,precio,peso){
-            this.nombre = nombre;
-            this.cancion = cancion;
-            this.IdCancion=IdCancion;
-            this.Cantidad=Cantidad;
     }
 
-        
+        public Disco (string titulo, string artista, string descripcion, List<Cancion> canciones) 
+           : base (titulo, artista) 
+        {
+            this.Nombre = Nombre;
+            this.cancion = cancion;
+            this.Sold=Sold;
+    }
 
+        public List<Cancion> Canciones
+        {
+            get { return canciones; }
+        }
 
-            public int IdCancion
+        public void Agregar(Cancion cancion)
+        {
+        canciones.Add(cancion);
+        }
+
+        public void Eliminar(Cancion cancion)
+        {
+            canciones.Remove(cancion);
+        }
+
+        public Cancion Buscar(Cancion cancion)
+        {
             {
-                get { return _IdCancion; }
-                set
+                foreach (Cancion Cancion in this.canciones)
                 {
-                    _cancion = null;
-                    _IdCancion = value;
-                }
-            }
-
-            public Cancion Cancion
-            {
-                get
-                {
-                    if (_cancion == null)
+                    if (Cancion.Titulo == Titulo)
                     {
-                        _cancion = new Cancion(IdCancion);
+                        return Cancion;
                     }
-                    return _cancion;
                 }
+                return null;
             }
+        }
 
-            public string Descripcion
+        public override string ToString()
+        {
+            String info = base.ToString() + "Total Canciones: " + CC + "\n"+ "Titulos: ";
+            if (Canciones != null)
             {
-                get { return Cancion.descripcion; }
-            }
-            public double PrecioUnitario
-            {
-                get { return Cancion.precio; }
-            }
-            public double Total
-            {
-                get { return PrecioUnitario * Cantidad; }
-            }
+                foreach (Cancion disco in Canciones)
+                {
+                    info += disco.Titulo;
+                }
+            } return info;
+           
+        }
 
-            public Disco (int pId)
+        public override bool Equals(object obj)
+        {
+            bool result = false;
+            Disco d = (Disco)obj;
+            if (base.Equals(d) && CC == d.CC && Canciones == d.Canciones)
             {
-                IdCancion = pId;
-            }
-            public bool Equals(Disco pItem)
+                return true;
+
+            }return result;
+        }
+
+ 
+            public override int GetHashCode()
             {
-                return pItem.IdCancion == IdCancion;
+                return base.GetHashCode();
             }
         }
 

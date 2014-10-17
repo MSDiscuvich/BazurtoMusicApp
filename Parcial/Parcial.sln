@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazurtoMusic", "BazurtoMusi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{15F9AAF4-6706-49ED-B861-31E2E3CDEFAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{CAA2F4CC-2DDA-49C9-97F7-C26EC92DA19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{F4337A62-E7AC-4AD6-8379-98A00FAFE9D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{15F9AAF4-6706-49ED-B861-31E2E3CDEFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15F9AAF4-6706-49ED-B861-31E2E3CDEFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15F9AAF4-6706-49ED-B861-31E2E3CDEFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA2F4CC-2DDA-49C9-97F7-C26EC92DA19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA2F4CC-2DDA-49C9-97F7-C26EC92DA19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA2F4CC-2DDA-49C9-97F7-C26EC92DA19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA2F4CC-2DDA-49C9-97F7-C26EC92DA19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4337A62-E7AC-4AD6-8379-98A00FAFE9D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4337A62-E7AC-4AD6-8379-98A00FAFE9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4337A62-E7AC-4AD6-8379-98A00FAFE9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4337A62-E7AC-4AD6-8379-98A00FAFE9D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
